@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\CreateBook;
+use App\Http\Livewire\EditBook;
 use App\Http\Livewire\ShowBooks;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +30,6 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/book', ShowBooks::class);
     Route::get('/book/add', CreateBook::class);
+    Route::get('/book/edit/{book}', EditBook::class);
 
 });
