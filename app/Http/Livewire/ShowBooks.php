@@ -14,4 +14,9 @@ class ShowBooks extends Component
         ]);
         return view('livewire.show-books');
     }
+
+    public function delete(Book $book)
+    {
+        $book->delete();
+    }
 }
